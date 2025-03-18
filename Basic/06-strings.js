@@ -28,9 +28,14 @@ console.log(greeting.includes("Marlon"));
 console.log(greeting.includes("Quintero"));
 console.log(greeting.slice(0 , 10));
 console.log(greeting.replace("Marlon", "Kaizer"));
+console.log(greeting.split(""));
+console.log(greeting.split("").reverse("").join(""));
+
+
  
 
 // Template literals (Plantillas literales)
+console.log("PLANTILLAS LITERALES");
 
 let message = `Hola, este es mi 
 curso de javascript` 
