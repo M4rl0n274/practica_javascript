@@ -97,13 +97,12 @@ let a = 1;
 let b = 0;
 let temp;
 // primeros 15 valores
-for (let y = 0; y <= 14; y++) {
+for (let y = 0; y <= 9; y++) {
   //console.log(a);
   temp = a + b;
   a = b;
   b = temp;
-  //console.log( "temp"+temp);
-  console.log("calculo:  " + temp + " + " + a + " = " + a);
+  console.log( temp + " + " + a + " = " + a);
 }
 
 // 10. Dado un array de números, usa un bucle para crear un nuevo array que contenga solo los números mayores a 10
