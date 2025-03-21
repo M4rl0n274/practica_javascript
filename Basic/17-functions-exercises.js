@@ -147,21 +147,16 @@
 
 // console.log(invertir(texto));
 
-
-
 //* 10. Crea una función que calcule el factorial de un número dado
 
-let resultadoFactorial = 1; 
+let resultadoFactorial = 1;
 
-function factorial (numero){
-
-  for ( let i = numero ; i >1; i --){
-    resultadoFactorial *= i
-
+function factorial(numero) {
+  for (let i = numero; i > 1; i--) {
+    resultadoFactorial *= i;
   }
 
-return resultadoFactorial
+  return resultadoFactorial;
 }
 
 console.log(factorial(5));
-
