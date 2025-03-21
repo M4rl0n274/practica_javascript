@@ -135,18 +135,33 @@
 
 //* 9. Crea una función que reciba una cadena de texto y devuelva la misma cadena con las palabras en orden inverso
 
-let texto = "Que dice la banda"
+// let texto = "Que dice la banda"
 
-function invertir (textoInvertir){
-  let inverso = "";
-  for ( let x = textoInvertir.length ; x >= 0  ; x --){
-    inverso += textoInvertir[x]
-  }
-  return inverso
-}
+// function invertir (textoInvertir){
+//   let inverso = "";
+//   for ( let x = textoInvertir.length ; x >= 0  ; x --){
+//     inverso += textoInvertir[x]
+//   }
+//   return inverso
+// }
 
-console.log(invertir(texto));
+// console.log(invertir(texto));
 
 
 
 //* 10. Crea una función que calcule el factorial de un número dado
+
+let resultadoFactorial = 1; 
+
+function factorial (numero){
+
+  for ( let i = numero ; i >1; i --){
+    resultadoFactorial *= i
+
+  }
+
+return resultadoFactorial
+}
+
+console.log(factorial(5));
+
