@@ -120,19 +120,33 @@
 
 //* 8. Crea una función que reciba un array de números y devuelva un nuevo array con cada número elevado al cuadrado
 
-let elevados = [2, 10, 200, 100];
+// let elevados = [2, 10, 200, 100];
 
-function numerosElevados(arrElevado) {
-  potencia = [];
-  resultado = 0;
-  for (let i = 0; i < arrElevado.length; i++) {
-    resultado = arrElevado[i] **2;
-    potencia.push(resultado);
-  }
-  return potencia;
-}
-console.log(numerosElevados(elevados));
+// function numerosElevados(arrElevado) {
+//   potencia = [];
+//   resultado = 0;
+//   for (let i = 0; i < arrElevado.length; i++) {
+//     resultado = arrElevado[i] **2;
+//     potencia.push(resultado);
+//   }
+//   return potencia;
+// }
+// console.log(numerosElevados(elevados));
 
 //* 9. Crea una función que reciba una cadena de texto y devuelva la misma cadena con las palabras en orden inverso
+
+let texto = "Que dice la banda"
+
+function invertir (textoInvertir){
+  let inverso = "";
+  for ( let x = textoInvertir.length ; x >= 0  ; x --){
+    inverso += textoInvertir[x]
+  }
+  return inverso
+}
+
+console.log(invertir(texto));
+
+
 
 //* 10. Crea una función que calcule el factorial de un número dado
