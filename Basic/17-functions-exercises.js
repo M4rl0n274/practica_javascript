@@ -63,27 +63,36 @@
 
 //* 5. Crea una función que reciba un número y devuelva true si es primo, y false en caso contrario
 
-function primo(n) {
-  if (n < 2) return false
+// function primo(n) {
+//   if (n < 2) return false
 
-  for (let i = 2; i <= Math.sqrt(n); i++) {
-    if (n % i === 0) {
-      return false; // Si tiene un divisor, no es primo
-    }
-  }
-  return true; // Si no tuvo divisores, es primo
+//   for (let i = 2; i <= Math.sqrt(n); i++) {
+//     if (n % i === 0) {
+//       return false; // Si tiene un divisor, no es primo
+//     }
+//   }
+//   return true; // Si no tuvo divisores, es primo
 
-
-}
-console.log(primo(3))
-
-
-
-
-
-
+// }
+// console.log(primo(3))
 
 //* 6. Crea una función que reciba dos arrays y devuelva un nuevo array que contenga los elementos comunes entre ambos
+
+let numerosOne = [1, 2, 3, 4, 5, 10];
+let numerosTwo = [10, 2, 4, 10, 5, 1];
+
+function dosArrays(arr1, arr2) {
+  let numerosNuevos = [];
+  for (let i = 0; i < arr1.length; i++) {
+    //console.log(`arreglo one ${numerosOne[i]} arreglo two ${numerosTwo[i]}`);
+    if (arr2.includes(arr1[i])) {
+      numerosNuevos.push(arr1[i]);
+    }
+  }
+  return numerosNuevos;
+}
+
+console.log(dosArrays(numerosOne, numerosTwo));
 
 //* 7. Crea una función que reciba un array de números y devuelva la suma de todos los números pares
 
