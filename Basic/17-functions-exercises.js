@@ -78,23 +78,45 @@
 
 //* 6. Crea una función que reciba dos arrays y devuelva un nuevo array que contenga los elementos comunes entre ambos
 
-let numerosOne = [1, 2, 3, 4, 5, 10];
-let numerosTwo = [10, 2, 4, 10, 5, 1];
+// let numerosOne = [1, 2, 3, 4, 5, 10];
+// let numerosTwo = [10, 2, 4, 10, 5, 1];
 
-function dosArrays(arr1, arr2) {
-  let numerosNuevos = [];
-  for (let i = 0; i < arr1.length; i++) {
-    //console.log(`arreglo one ${numerosOne[i]} arreglo two ${numerosTwo[i]}`);
-    if (arr2.includes(arr1[i])) {
-      numerosNuevos.push(arr1[i]);
-    }
-  }
-  return numerosNuevos;
-}
+// function dosArrays(arr1, arr2) {
+//   let numerosNuevos = [];
+//   for (let i = 0; i < arr1.length; i++) {
+//     //console.log(`arreglo one ${numerosOne[i]} arreglo two ${numerosTwo[i]}`);
+//     if (arr2.includes(arr1[i])) {
+//       numerosNuevos.push(arr1[i]);
+//     }
+//   }
+//   return numerosNuevos;
+// }
 
-console.log(dosArrays(numerosOne, numerosTwo));
+// console.log(dosArrays(numerosOne, numerosTwo));
 
 //* 7. Crea una función que reciba un array de números y devuelva la suma de todos los números pares
+
+// let numerosPares = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// function pares(arrpar) {
+//   let sumaPar = 0;
+//   for (let i = 0; i < arrpar.length; i++) {
+//     if (arrpar[i] % 2 == 0) {
+//       sumaPar += arrpar[i];
+//     }
+//   }
+//   return sumaPar;
+// }
+
+// console.log(pares(numerosPares));
+
+// let num = 2;
+// let num2 = 3;
+
+// if ( num  % 2 ==0 ){
+//   console.log("par ");
+
+// }
 
 //* 8. Crea una función que reciba un array de números y devuelva un nuevo array con cada número elevado al cuadrado
 
