@@ -50,8 +50,6 @@ try {
 //throw new Error("se ha producido un error");
 
 // Crear excepciones personalizadas
-
-
 class sumZeroIntegerError extends Error{
     constructor (message,a,b){
         super(message)
