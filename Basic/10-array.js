@@ -100,3 +100,18 @@ myArray.push("Marlon" ,  "Quintero","hola", 20, true)
 myArray.splice(1, 2 ,"Nueva entrada") 
 console.log(myArray);
 
+let arreglo = ["marlon", "Quintero", 20]
+
+arreglo.push("21")
+console.log(arreglo);
+
+arreglo.pop()
+console.log(arreglo);
+
+arreglo.unshift("Unshift")
+console.log(arreglo);
+
+arreglo.shift()
+console.log(arreglo);
+
+

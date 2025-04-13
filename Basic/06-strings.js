@@ -46,3 +46,8 @@ let email = "marlonquintero@gmail.com"
 
 console.log(`Hola, ${myName}! Tu email es ${email}.`);
 
+let cadena = "Marlon Quintero"
+
+console.log(cadena.split(""));
+console.log(cadena.split("")[0]);
+

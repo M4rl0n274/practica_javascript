@@ -101,7 +101,11 @@ console.log(operacion > 12 && operacion < 14 +"" );
 operacion ? console.log("Operacion validada"): console.log("Operacion incorrecta");
 
 
+let aa = 2
+let bb = 2
 
+console.log(aa == bb);
+console.log(aa === bb);
 
-
+console.log(typeof aa == typeof bb);
 
