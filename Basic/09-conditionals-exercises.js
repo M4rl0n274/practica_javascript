@@ -122,60 +122,104 @@ switch (mesSwitch) {
 
 // 10. Usa un switch para hacer de nuevo el ejercicio 7
 let nameMonth;
-switch(mesSwitch){
-    case 0:
-    nameMonth = "Enero"
+switch (mesSwitch) {
+  case 0:
+    nameMonth = "Enero";
     console.log(`El mes ${nameMonth} tiene 31 dias`);
     break;
-    case 1:
-    nameMonth = "Febrero"
+  case 1:
+    nameMonth = "Febrero";
     console.log(`El mes ${nameMonth} tiene 28 dias`);
     break;
-    case 2:
-    nameMonth = "Marzo"
+  case 2:
+    nameMonth = "Marzo";
     console.log(`El mes ${nameMonth} tiene 31 dias`);
     break;
-    case 3:
-    nameMonth = "Abril"
+  case 3:
+    nameMonth = "Abril";
     console.log(`El mes ${nameMonth} tiene 30 dias`);
     break;
-    case 4:
-    nameMonth = "Mayo"
+  case 4:
+    nameMonth = "Mayo";
     console.log(`El mes ${nameMonth} tiene 31 dias`);
     break;
-    case 5:
-    nameMonth = "Junio"
+  case 5:
+    nameMonth = "Junio";
     console.log(`El mes ${nameMonth} tiene 30 dias`);
     break;
-    case 6:
-    nameMonth = "Julio"
+  case 6:
+    nameMonth = "Julio";
     console.log(`El mes ${nameMonth} tiene 31 dias`);
     break;
-    case 7:
-    nameMonth = "Agosto"
+  case 7:
+    nameMonth = "Agosto";
     console.log(`El mes ${nameMonth} tiene 31 dias`);
     break;
-    case 8:
-    nameMonth = "Septiembre"
+  case 8:
+    nameMonth = "Septiembre";
     console.log(`El mes ${nameMonth} tiene 30 dias`);
     break;
-    case 8:
-    nameMonth = "Octubre"
+  case 8:
+    nameMonth = "Octubre";
     console.log(`El mes ${nameMonth} tiene 31 dias`);
     break;
-    case 8:
-    nameMonth = "Noviembre"
+  case 8:
+    nameMonth = "Noviembre";
     console.log(`El mes ${nameMonth} tiene 30 dias`);
     break;
-    case 8:
-    nameMonth = "Diciembre"
+  case 8:
+    nameMonth = "Diciembre";
     console.log(`El mes ${nameMonth} tiene 31 dias`);
     break;
-    default:
-        console.log("Dato no valido"); 
+  default:
+    console.log("Dato no valido");
 }
 
+const prompt = require("prompt-sync")();
+//* Crea un programa que pida al usuario la cantidad de productos comprados. Dependiendo del número
+//* ingresado, muestra en consola el porcentaje de descuento que se aplicará:
+//* 1 a 4 productos: sin descuento
+//* 5 a 9 productos: 10% de descuento
+//* 10 o más productos: 20% de descuento
 
+//
 
+//* Solicita al usuario su salario mensual. El programa debe determinar el porcentaje de impuesto a pagar según estos rangos:
+//* Menos de $1,000,000: 0%
+//* Entre $1,000,000 y $2,000,000: 10%
+//* Más de $2,000,000: 20%
+//* Muestra en consola el porcentaje de impuesto que debe pagar.
 
+// let salarioMensual = Number(prompt("Ingrese su salario mensual: "));
 
+// if (salarioMensual == 0) {
+//   console.log("su salario no puede ser cero pesos");
+// } else if (salarioMensual <= 1000000) {
+//   console.log("No debe pagar impuestos");
+// } else if (salarioMensual > 1000000 && salarioMensual <= 2000000) {
+//   console.log("debe pagar 10% de impuestos");
+// } else if (salarioMensual > 2000000) {
+//   console.log("debe pagar 20% de impuestos");
+// } else {
+//   console.log("Ingreso un caracter invalido");
+// }
+
+//* Crea un programa que pida al usuario la hora de ingreso (en formato 24 horas, solo la hora,
+//* por ejemplo: 14 para las 2 p.m.). Según la hora, muestra un mensaje que diga:
+//* Antes de las 8:00 → “Llegaste temprano”
+//* De 8:00 a 9:00 → “Llegaste a tiempo”
+//* Después de las 9:00 → “Llegaste tarde”
+
+let horaIngreso = Number(prompt("¿Cual fue la hora de ingreso?: "));
+
+if (horaIngreso > 24 || horaIngreso < 1) {
+  console.log("ingrese una hora correcta en formato de 24 horas");
+} else if (horaIngreso < 8) {
+  console.log("Llegaste temprano");
+} else if (horaIngreso >= 8 && horaIngreso <= 9) {
+  console.log("Llegaste a tiempo");
+} else if (horaIngreso > 9) {
+  console.log("Llegaste tarde");
+} else {
+  console.log("Ingresa un caracter valido");
+}
