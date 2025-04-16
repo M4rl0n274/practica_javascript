@@ -182,7 +182,17 @@ const prompt = require("prompt-sync")();
 //* 5 a 9 productos: 10% de descuento
 //* 10 o más productos: 20% de descuento
 
-//
+let productos = Number(prompt("Ingrese la cantidad de productos comprados: "));
+
+if (productos >= 1 && productos <= 4) {
+  console.log("Sin descuento");
+} else if (productos >= 5 && productos <= 9) {
+  console.log("10% de descuento");
+} else if (productos >= 10) {
+  console.log("20% de descuento");
+} else {
+  console.log("Ingrese un valor númerico");
+}
 
 //* Solicita al usuario su salario mensual. El programa debe determinar el porcentaje de impuesto a pagar según estos rangos:
 //* Menos de $1,000,000: 0%
@@ -210,16 +220,16 @@ const prompt = require("prompt-sync")();
 //* De 8:00 a 9:00 → “Llegaste a tiempo”
 //* Después de las 9:00 → “Llegaste tarde”
 
-let horaIngreso = Number(prompt("¿Cual fue la hora de ingreso?: "));
+// let horaIngreso = Number(prompt("¿Cual fue la hora de ingreso?: "));
 
-if (horaIngreso > 24 || horaIngreso < 1) {
-  console.log("ingrese una hora correcta en formato de 24 horas");
-} else if (horaIngreso < 8) {
-  console.log("Llegaste temprano");
-} else if (horaIngreso >= 8 && horaIngreso <= 9) {
-  console.log("Llegaste a tiempo");
-} else if (horaIngreso > 9) {
-  console.log("Llegaste tarde");
-} else {
-  console.log("Ingresa un caracter valido");
-}
+// if (horaIngreso > 24 || horaIngreso < 1) {
+//   console.log("ingrese una hora correcta en formato de 24 horas");
+// } else if (horaIngreso < 8) {
+//   console.log("Llegaste temprano");
+// } else if (horaIngreso >= 8 && horaIngreso <= 9) {
+//   console.log("Llegaste a tiempo");
+// } else if (horaIngreso > 9) {
+//   console.log("Llegaste tarde");
+// } else {
+//   console.log("Ingresa un caracter valido");
+// }
