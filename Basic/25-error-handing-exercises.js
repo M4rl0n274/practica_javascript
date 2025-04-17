@@ -87,25 +87,109 @@ try {
   console.log("se produjo un error", error.message);
 }
 
-try{
-    usuario(100, 1.0)
-}catch(error){
-    console.log("se ha producido un error", error.message);
-    error.mostrarError()
+try {
+  usuario(100, 1.0);
+} catch (error) {
+  console.log("se ha producido un error", error.message);
+  error.mostrarError();
 }
 
 //* 7. Captura varias excepciones en un mismo try-catch
+console.log("===Ejercicio 7===");
 
-try{
+class SoloText extends Error {
+  constructor(mensaje, nombre, apellido) {
+    super(mensaje);
+    this.nombre = nombre;
+    this.apellido = apellido;
+    this.name = "SoloText";
+  }
 }
-catch{
-  
+
+function usuario2(nombre, apellido) {
+  if (typeof nombre !== "string" || typeof apellido !== "string") {
+    throw new SoloText(
+      "Se estan ingresando datos numericos u otros desde usuario 2",
+      nombre,
+      apellido
+    );
+  }
+
+  if (nombre.length < 4 || apellido.length < 4) {
+    throw new Error("Nombre o apellidos demasiado cortos desde usuario 2");
+  }
+  console.log("Nombre y apellido validos", nombre, apellido);
 }
+
+// probando excepciones y errores
+
+try {
+  usuario2(500, "Quintero");
+} catch (error) {
+  if (error instanceof SoloText) {
+    console.log("Error personalizado: ", error.message);
+    console.log("Valores recibidos ", error.nombre, error.apellido);
+  } else if (error instanceof Error) {
+    console.log("Error general", error.message);
+  } else {
+    console.log("Otro tipo de Error", Error);
+  }
+}
+
 //* 8. Crea un bucle que intente transformar a float cada valor y capture y muestre los errores
+console.log("===Ejercicio 8===");
+const valores = ["123.45", "abc", "456", null, undefined, "78kg", true];
+
+for (let i = 0; i < valores.length; i++) {
+  const valor = valores[i];
+
+  try {
+    const convertido = parseFloat(valor);
+
+    if (isNaN(convertido)) {
+      throw new Error(`El valor "${valor}" no es un número válido`);
+    }
+    console.log(`Valor convertido: ${convertido}`);
+  } catch (error) {
+    console.log(`Error al convertir "${valor}": ${error.message}`);
+  }
+}
 
 //* 9. Crea una función que verifique si un objeto tiene una propiedad específica y lance una excepción personalizada
+console.log("===Ejercicio 9===");
+
+// Error personalizado
+class invalido extends Error {
+  constructor(mensaje) {
+    super(mensaje);
+    this.name = "propiedad invalida";
+  }
+}
+
+let computer = {
+  ssd: "1tb",
+  ram: "32gb",
+  fuentePoder: "500W",
+};
+
+function verificar(objeto) {
+  if (objeto in computer) {
+    console.log("Existe");
+  } else {
+    throw new invalido("La propiedad  en el objeto");
+  }
+}
+try {
+  verificar("fuentePoder");
+} catch (Error) {
+  console.log("No existe", Error.message);
+}
 
 //* 10. Crea una función que realice reintentos en caso de error hasta un máximo de 10
+
+
+
+
 
 
 
