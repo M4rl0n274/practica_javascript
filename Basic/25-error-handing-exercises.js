@@ -189,6 +189,10 @@ try {
 
 
 
+function intentos(intento){
+
+}
+
 
 
 
