@@ -233,3 +233,27 @@ if (productos >= 1 && productos <= 4) {
 // } else {
 //   console.log("Ingresa un caracter valido");
 // }
+
+
+//* Crea un programa en JavaScript que solicite al usuario (puedes simularlo con una variable) una calificación numérica entre 0 y 100 y que:
+//* Use if-else if-else para determinar la siguiente evaluación:
+//* 90 a 100 → "Excelente"
+//* 80 a 89 → "Muy bien"
+//* 70 a 79 → "Bien"
+//* 60 a 69 → "Suficiente"
+//* Menos de 60 → "Insuficiente"
+//* Luego, usando un switch, dependiendo del texto de la evaluación, muestre una recomendación personalizada:
+//* "Excelente" → "¡Sigue así, vas por excelente camino!"
+//* "Muy bien" → "Muy buen trabajo, aún puedes mejorar un poco más."
+//* "Bien" → "Vas bien, pero ponle un poco más de empeño."
+//* "Suficiente" → "Estás cerca, pero necesitas reforzar tus conocimientos."
+//* "Insuficiente" → "Es momento de repasar y pedir ayuda si la necesitas."
+
+
+
+
+
+
+
+
+
