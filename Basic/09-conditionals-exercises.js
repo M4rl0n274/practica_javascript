@@ -251,7 +251,7 @@ const prompt = require("prompt-sync")();
 let calificacion = Number(prompt("Ingrese su calificación (0 - 100): "));
 let resultado = "";
 
-if (typeof calificacion == "number" && calificacion > 0) {
+if (!isNaN(calificacion) && calificacion >= 0 && calificacion <= 100) {
   //console.log("Error saliendo del programa");
 
   if (calificacion >= 90 && calificacion <= 100) {
@@ -265,7 +265,8 @@ if (typeof calificacion == "number" && calificacion > 0) {
   } else {
     resultado += "Insuficiente";
   }
-} else if ((resultado += "error")) {
+} else {
+  resultado = "error";
 }
 switch (resultado) {
   case "Excelente":
@@ -292,5 +293,3 @@ switch (resultado) {
   case "error":
     console.log("Dato ingresado invalido");
 }
-
-//console.log(`Tu resultado es: ${resultado}`);
