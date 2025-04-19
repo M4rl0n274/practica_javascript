@@ -182,17 +182,17 @@ const prompt = require("prompt-sync")();
 //* 5 a 9 productos: 10% de descuento
 //* 10 o más productos: 20% de descuento
 
-let productos = Number(prompt("Ingrese la cantidad de productos comprados: "));
+// let productos = Number(prompt("Ingrese la cantidad de productos comprados: "));
 
-if (productos >= 1 && productos <= 4) {
-  console.log("Sin descuento");
-} else if (productos >= 5 && productos <= 9) {
-  console.log("10% de descuento");
-} else if (productos >= 10) {
-  console.log("20% de descuento");
-} else {
-  console.log("Ingrese un valor númerico");
-}
+// if (productos >= 1 && productos <= 4) {
+//   console.log("Sin descuento");
+// } else if (productos >= 5 && productos <= 9) {
+//   console.log("10% de descuento");
+// } else if (productos >= 10) {
+//   console.log("20% de descuento");
+// } else {
+//   console.log("Ingrese un valor númerico");
+// }
 
 //* Solicita al usuario su salario mensual. El programa debe determinar el porcentaje de impuesto a pagar según estos rangos:
 //* Menos de $1,000,000: 0%
@@ -234,7 +234,6 @@ if (productos >= 1 && productos <= 4) {
 //   console.log("Ingresa un caracter valido");
 // }
 
-
 //* Crea un programa en JavaScript que solicite al usuario (puedes simularlo con una variable) una calificación numérica entre 0 y 100 y que:
 //* Use if-else if-else para determinar la siguiente evaluación:
 //* 90 a 100 → "Excelente"
@@ -249,11 +248,49 @@ if (productos >= 1 && productos <= 4) {
 //* "Suficiente" → "Estás cerca, pero necesitas reforzar tus conocimientos."
 //* "Insuficiente" → "Es momento de repasar y pedir ayuda si la necesitas."
 
+let calificacion = Number(prompt("Ingrese su calificación (0 - 100): "));
+let resultado = "";
 
+if (typeof calificacion == "number" && calificacion > 0) {
+  //console.log("Error saliendo del programa");
 
+  if (calificacion >= 90 && calificacion <= 100) {
+    resultado += "Excelente";
+  } else if (calificacion >= 80 && calificacion <= 89) {
+    resultado += "Muy Bien";
+  } else if (calificacion >= 70 && calificacion <= 79) {
+    resultado += "Bien";
+  } else if (calificacion >= 60 && calificacion <= 69) {
+    resultado += "Suficiente";
+  } else {
+    resultado += "Insuficiente";
+  }
+} else if ((resultado += "error")) {
+}
+switch (resultado) {
+  case "Excelente":
+    console.log(resultado + " ¡Sigue así, vas por excelente camino!");
+    break;
+  case "Muy Bien":
+    console.log(
+      resultado + " Muy buen trabajo, aún puedes mejorar un poco más."
+    );
+    break;
+  case "Bien":
+    console.log(resultado + " Vas bien, pero ponle un poco más de empeño.");
+    break;
+  case "Suficiente":
+    console.log(
+      resultado + " Estás cerca, pero necesitas reforzar tus conocimientos."
+    );
+    break;
+  case "Insuficiente":
+    console.log(
+      resultado + " Es momento de repasar y pedir ayuda si la necesitas."
+    );
+    break;
+  case "error":
+    console.log("Dato ingresado invalido");
+}
 
-
-
-
-
-
+//console.log(`Tu resultado es: ${resultado}`);
