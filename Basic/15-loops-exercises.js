@@ -102,7 +102,7 @@ for (let y = 0; y <= 9; y++) {
   temp = a + b;
   a = b;
   b = temp;
-  console.log( temp + " + " + a + " = " + a);
+  console.log(temp + " + " + a + " = " + a);
 }
 
 // 10. Dado un array de números, usa un bucle para crear un nuevo array que contenga solo los números mayores a 10
@@ -117,3 +117,81 @@ for (let i = 0; i < numerosArray.length; i++) {
   newArray.push(numerosArray[i]);
 }
 console.log(newArray);
+
+//* Una tienda en línea desea procesar una lista de productos. Cada producto tiene:
+//? Un nombre
+//? Un tipo (por ejemplo: "ropa", "tecnología", "comida")
+//? Un precio
+//* Tu tarea es:
+//* Recorrer un arreglo de productos usando un bucle for.
+//* Para cada producto:
+//? Usa if - else if - else para clasificar el precio:
+//? Menor a $20 → "económico"
+//? Entre $20 y $100 → "precio medio"
+//? Mayor a $100 → "caro"
+//* Usa un switch para mostrar un mensaje especial según el tipo de producto:
+//? "ropa" → "Producto de moda"
+//? "tecnología" → "Producto con garantía"
+//? "comida" → "Producto perecedero"
+//? cualquier otro → "Tipo de producto desconocido"
+//* Resultado:
+//? Por cada producto, imprime algo como:
+//? Camisa: económico | Producto de moda
+//? Laptop: caro | Producto con garantía
+//? Pan: económico | Producto perecedero
+console.log("====Ejercicio repaso====");
+
+let productos = [
+  { nombre: "pantalon", tipo: "ropa", precio: 50 },
+  { nombre: "celular", tipo: "tecnologia", precio: 500 },
+  { nombre: "manzana", tipo: "comida", precio: 2 },
+  { nombre: "objeto sin nombre", tipo: "desconocido", precio: 10 },
+];
+let mensaje = "";
+let tipo = "";
+
+for (let i = 0; i < productos.length; i++) {
+
+
+  if (productos[i].tipo == "ropa") {
+    tipo = "ropa";
+  } else if (productos[i].tipo == "tecnologia") {
+    tipo = "tecnologia";
+  } else if (productos[i].tipo == "comida") {
+    tipo = "comida";
+  } else {
+    tipo = "desconocido";
+  }
+  switch (productos[i].tipo) {
+    case "ropa":
+      mensaje = "| Producto de moda";
+      break;
+    case "tecnologia":
+      mensaje = "| Producto con garantía";
+      break;
+    case "comida":
+      mensaje = "| Producto perecedero";
+      break;
+    case "desconocido":
+      mensaje = "| Tipo de producto desconocido";
+      break;
+  }
+
+  if (productos[i].precio > 0 && productos[i].precio <= 20) {
+    console.log(
+      ` ${productos[i].nombre} : ${productos[i].precio} es economico ${mensaje}`
+    );
+  } else if (productos[i].precio > 20 && productos[i].precio <= 100) {
+    console.log(
+      `${productos[i].nombre} : ${productos[i].precio} tiene un costo medio ${mensaje}`
+    );
+  } else if (productos[i].precio > 100 && productos[i].precio <= 500) {
+    console.log(
+      ` ${productos[i].nombre} : ${productos[i].precio} es caro ${mensaje}`
+    );
+  } else {
+    console.log(
+      ` ${productos[i].nombre} : ${productos[i].precio} no se encuentra ${mensaje}`
+    );
+  }
+}

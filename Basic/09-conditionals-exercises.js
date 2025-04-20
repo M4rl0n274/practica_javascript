@@ -248,48 +248,50 @@ const prompt = require("prompt-sync")();
 //* "Suficiente" → "Estás cerca, pero necesitas reforzar tus conocimientos."
 //* "Insuficiente" → "Es momento de repasar y pedir ayuda si la necesitas."
 
-let calificacion = Number(prompt("Ingrese su calificación (0 - 100): "));
-let resultado = "";
+// let calificacion = Number(prompt("Ingrese su calificación (0 - 100): "));
+// let resultado = "";
 
-if (!isNaN(calificacion) && calificacion >= 0 && calificacion <= 100) {
-  //console.log("Error saliendo del programa");
+// if (!isNaN(calificacion) && calificacion >= 0 && calificacion <= 100) {
 
-  if (calificacion >= 90 && calificacion <= 100) {
-    resultado += "Excelente";
-  } else if (calificacion >= 80 && calificacion <= 89) {
-    resultado += "Muy Bien";
-  } else if (calificacion >= 70 && calificacion <= 79) {
-    resultado += "Bien";
-  } else if (calificacion >= 60 && calificacion <= 69) {
-    resultado += "Suficiente";
-  } else {
-    resultado += "Insuficiente";
-  }
-} else {
-  resultado = "error";
-}
-switch (resultado) {
-  case "Excelente":
-    console.log(resultado + " ¡Sigue así, vas por excelente camino!");
-    break;
-  case "Muy Bien":
-    console.log(
-      resultado + " Muy buen trabajo, aún puedes mejorar un poco más."
-    );
-    break;
-  case "Bien":
-    console.log(resultado + " Vas bien, pero ponle un poco más de empeño.");
-    break;
-  case "Suficiente":
-    console.log(
-      resultado + " Estás cerca, pero necesitas reforzar tus conocimientos."
-    );
-    break;
-  case "Insuficiente":
-    console.log(
-      resultado + " Es momento de repasar y pedir ayuda si la necesitas."
-    );
-    break;
-  case "error":
-    console.log("Dato ingresado invalido");
-}
+//   if (calificacion >= 90 && calificacion <= 100) {
+//     resultado += "Excelente";
+//   } else if (calificacion >= 80 && calificacion <= 89) {
+//     resultado += "Muy Bien";
+//   } else if (calificacion >= 70 && calificacion <= 79) {
+//     resultado += "Bien";
+//   } else if (calificacion >= 60 && calificacion <= 69) {
+//     resultado += "Suficiente";
+//   } else {
+//     resultado += "Insuficiente";
+//   }
+// } else {
+//   resultado = "error";
+// }
+// switch (resultado) {
+//   case "Excelente":
+//     console.log(resultado + " ¡Sigue así, vas por excelente camino!");
+//     break;
+//   case "Muy Bien":
+//     console.log(
+//       resultado + " Muy buen trabajo, aún puedes mejorar un poco más."
+//     );
+//     break;
+//   case "Bien":
+//     console.log(resultado + " Vas bien, pero ponle un poco más de empeño.");
+//     break;
+//   case "Suficiente":
+//     console.log(
+//       resultado + " Estás cerca, pero necesitas reforzar tus conocimientos."
+//     );
+//     break;
+//   case "Insuficiente":
+//     console.log(
+//       resultado + " Es momento de repasar y pedir ayuda si la necesitas."
+//     );
+//     break;
+//   case "error":
+//     console.log("Dato ingresado invalido");
+// }
+
+
+
