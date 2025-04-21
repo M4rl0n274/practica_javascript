@@ -25,42 +25,38 @@ computer["powerOn"] = function () {
   console.log("Esta encendida");
 };
 
-computer.powerOn()
+computer.powerOn();
 
 // 6. Itera las propiedades del objeto
 
 for (let key in computer) {
-    console.log(key + ": " + computer[key]);
-  }
+  console.log(key + ": " + computer[key]);
+}
 
 // 7. Crea un objeto anidado
 console.log("7. Crea un objeto anidado");
 
-let phone ={
-    resolution: "1024x",
-    storage: "256gb",
-    ram: "8gb",
-    camera: "50Mpx",
-    batery: "8000mAh",
-    user: {
-        name: "Marlon",
-        country: "Colombia",
-        age: 20,
-        usage: "8 hours"
-    }
-}
+let phone = {
+  resolution: "1024x",
+  storage: "256gb",
+  ram: "8gb",
+  camera: "50Mpx",
+  batery: "8000mAh",
+  user: {
+    name: "Marlon",
+    country: "Colombia",
+    age: 20,
+    usage: "8 hours",
+  },
+};
 
 // 8. Accede y muestra el valor de las propiedades anidadas
 
 console.log(phone.user);
 
-
-
 // 9. Comprueba si los dos objetos creados son iguales
 
 console.log(computer == phone);
 
-
 // 10. Comprueba si dos propiedades diferentes son iguales
 console.log(computer.cpu == phone.camera);
-

@@ -151,8 +151,6 @@ let mensaje = "";
 let tipo = "";
 
 for (let i = 0; i < productos.length; i++) {
-
-
   if (productos[i].tipo == "ropa") {
     tipo = "ropa";
   } else if (productos[i].tipo == "tecnologia") {

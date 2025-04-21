@@ -187,17 +187,4 @@ try {
 
 //* 10. Crea una función que realice reintentos en caso de error hasta un máximo de 10
 
-
-
-function intentos(intento){
-
-}
-
-
-
-
-
-
-
-
-
+function intentos(intento) {}

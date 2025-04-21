@@ -95,21 +95,17 @@ for (let key in person4) {
   console.log(key + ": " + person4[key]);
 }
 
-
 // Funciones como objects
 
-function Person (name, age){ // Deberia ser una clase
-    this.name = name
-    this.age = age
+function Person(name, age) {
+  // Deberia ser una clase
+  this.name = name;
+  this.age = age;
 }
 
-let person5 = new Person("Marlon", 20)
+let person5 = new Person("Marlon", 20);
 console.log(person5);
 console.log(person5.name);
 
 console.log(typeof person5);
 console.log(typeof person4);
-
-
-
-
