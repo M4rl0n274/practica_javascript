@@ -69,45 +69,42 @@ console.log(resul);
 // Funciones anidadas
 
 function extern() {
-    console.log("Funcion Externa");
+  console.log("Funcion Externa");
   function intern() {
     console.log("Funcion interna");
   }
-  intern()
+  intern();
 }
-extern()
-// intern() Fuera del scope 
+extern();
+// intern() Fuera del scope
 
 // Funciones de orden superior
 
-function applyFunc(func, param){
-    func(param)
+function applyFunc(func, param) {
+  func(param);
 }
 
-applyFunc(myFunc4 ,"Funcion de orden superior")
+applyFunc(myFunc4, "Funcion de orden superior");
 
 // forEach
-    // no se pueden detener con continue y break y no pueden retornar un nuevo array o set
+// no se pueden detener con continue y break y no pueden retornar un nuevo array o set
 
-myArray = [ 1,2,3,4]
+myArray = [1, 2, 3, 4];
 
-mySet = new Set(["Marlon" ,  "Quintero","hola", 20, true, "marlon@gmail.com"])
+mySet = new Set(["Marlon", "Quintero", "hola", 20, true, "marlon@gmail.com"]);
 
-myMap = new Map ([
-    ["name", "Marlon"],
-    ["email", "marlon@gamil.com"],
-    ["age", 20]
-])
-
+myMap = new Map([
+  ["name", "Marlon"],
+  ["email", "marlon@gamil.com"],
+  ["age", 20],
+]);
 
 myArray.forEach(function (value) {
- console.log(value)
-})
+  console.log(value);
+});
 
 myArray.forEach((value) => console.log(value));
 
 mySet.forEach((value) => console.log(value));
 
 myMap.forEach((value) => console.log(value));
-
-

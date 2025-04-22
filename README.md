@@ -1,1 +1,1 @@
-# practica_javascript
+# practica_javascript_curso
