@@ -139,57 +139,117 @@ console.log(newArray);
 //? Camisa: económico | Producto de moda
 //? Laptop: caro | Producto con garantía
 //? Pan: económico | Producto perecedero
-console.log("====Ejercicio repaso====");
+//console.log("====Ejercicio repaso====");
+// let productos = [
+//   { nombre: "pantalon", tipo: "ropa", precio: 50 },
+//   { nombre: "celular", tipo: "tecnologia", precio: 500 },
+//   { nombre: "manzana", tipo: "comida", precio: 2 },
+//   { nombre: "objeto sin nombre", tipo: "desconocido", precio: 10 },
+// ];
+// let mensaje = "";
+// let tipo = "";
 
-let productos = [
-  { nombre: "pantalon", tipo: "ropa", precio: 50 },
-  { nombre: "celular", tipo: "tecnologia", precio: 500 },
-  { nombre: "manzana", tipo: "comida", precio: 2 },
-  { nombre: "objeto sin nombre", tipo: "desconocido", precio: 10 },
+// for (let i = 0; i < productos.length; i++) {
+//   if (productos[i].tipo == "ropa") {
+//     tipo = "ropa";
+//   } else if (productos[i].tipo == "tecnologia") {
+//     tipo = "tecnologia";
+//   } else if (productos[i].tipo == "comida") {
+//     tipo = "comida";
+//   } else {
+//     tipo = "desconocido";
+//   }
+//   switch (productos[i].tipo) {
+//     case "ropa":
+//       mensaje = "| Producto de moda";
+//       break;
+//     case "tecnologia":
+//       mensaje = "| Producto con garantía";
+//       break;
+//     case "comida":
+//       mensaje = "| Producto perecedero";
+//       break;
+//     case "desconocido":
+//       mensaje = "| Tipo de producto desconocido";
+//       break;
+//   }
+
+//   if (productos[i].precio > 0 && productos[i].precio <= 20) {
+//     console.log(
+//       ` ${productos[i].nombre} : ${productos[i].precio} es economico ${mensaje}`
+//     );
+//   } else if (productos[i].precio > 20 && productos[i].precio <= 100) {
+//     console.log(
+//       `${productos[i].nombre} : ${productos[i].precio} tiene un costo medio ${mensaje}`
+//     );
+//   } else if (productos[i].precio > 100 && productos[i].precio <= 500) {
+//     console.log(
+//       ` ${productos[i].nombre} : ${productos[i].precio} es caro ${mensaje}`
+//     );
+//   } else {
+//     console.log(
+//       ` ${productos[i].nombre} : ${productos[i].precio} no se encuentra ${mensaje}`
+//     );
+//   }
+// }
+
+//* Una estación meteorológica registra las temperaturas durante una semana (7 días).
+// Tu tarea es:
+// Crear un arreglo con 7 temperaturas (puedes asignarlas tú o pedirlas con prompt).
+// Recorrer el arreglo usando un bucle for.
+// Para cada temperatura:
+// Usa if - else if - else para clasificar:
+// Menor a 10 → "Frío"
+// Entre 10 y 25 → "Templado"
+// Mayor a 25 → "Caluroso"
+// Usa un switch para dar una recomendación según la clasificación:
+// "Frío" → "Lleva abrigo"
+// "Templado" → "Buen clima para salir"
+// "Caluroso" → "Mantente hidratado"
+// Otro → "Dato no reconocido"
+
+console.log("====Ejercicio repaso 2 ====");
+
+let temperaturas = [1, 15, 28, 40, 11, 9, 20];
+let dias = [
+  "Lunes",
+  "Martes",
+  "Miercoles",
+  "Jueves",
+  "Viernes",
+  "Sabado",
+  "Domingo",
 ];
+let recomendacion = "";
+let dia = "";
 let mensaje = "";
-let tipo = "";
 
-for (let i = 0; i < productos.length; i++) {
-  if (productos[i].tipo == "ropa") {
-    tipo = "ropa";
-  } else if (productos[i].tipo == "tecnologia") {
-    tipo = "tecnologia";
-  } else if (productos[i].tipo == "comida") {
-    tipo = "comida";
-  } else {
-    tipo = "desconocido";
-  }
-  switch (productos[i].tipo) {
-    case "ropa":
-      mensaje = "| Producto de moda";
-      break;
-    case "tecnologia":
-      mensaje = "| Producto con garantía";
-      break;
-    case "comida":
-      mensaje = "| Producto perecedero";
-      break;
-    case "desconocido":
-      mensaje = "| Tipo de producto desconocido";
-      break;
+for (let i = 0; i < temperaturas.length; i++) {
+  for (let x = 0; x < dias.length; x++) {
+    dia = dias[i];
   }
 
-  if (productos[i].precio > 0 && productos[i].precio <= 20) {
-    console.log(
-      ` ${productos[i].nombre} : ${productos[i].precio} es economico ${mensaje}`
-    );
-  } else if (productos[i].precio > 20 && productos[i].precio <= 100) {
-    console.log(
-      `${productos[i].nombre} : ${productos[i].precio} tiene un costo medio ${mensaje}`
-    );
-  } else if (productos[i].precio > 100 && productos[i].precio <= 500) {
-    console.log(
-      ` ${productos[i].nombre} : ${productos[i].precio} es caro ${mensaje}`
-    );
+  if (temperaturas[i] < 10) {
+    recomendacion = "Frio";
+  } else if (temperaturas[i] > 10 && temperaturas[i] < 25) {
+    recomendacion = "Templado";
+  } else if (temperaturas[i] > 25) {
+    recomendacion = "Caluroso";
   } else {
-    console.log(
-      ` ${productos[i].nombre} : ${productos[i].precio} no se encuentra ${mensaje}`
-    );
   }
+
+  switch (recomendacion) {
+    case "Frio":
+      mensaje = "| Lleva abrigo";
+      break;
+    case "Templado":
+      mensaje = "| Buen clima para salir";
+      break;
+    case "Caluroso":
+      mensaje = "| Mantente hidratado";
+      break;
+    default:
+      mensaje = "| Dato inválido";
+  }
+  console.log(`${dia} ${temperaturas[i]}° → ${recomendacion} ${mensaje}`);
 }
