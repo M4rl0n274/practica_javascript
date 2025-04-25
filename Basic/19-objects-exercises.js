@@ -108,14 +108,11 @@ for (let i = 0; i < usuarios.length; i++) {
       `el usuario: ${usuarios[i].nombre} tiene acceso a contenido avanzado`
     );
   } else if (usuarios[i].rol == "administrador") {
-    console.log(
-      `el usuario: ${usuarios[i].nombre} tiene acceso total`
-    );
+    console.log(`el usuario: ${usuarios[i].nombre} tiene acceso total`);
   } else {
     console.log(`el usuario: ${usuarios[i].nombre} tiene acceso restringido`);
   }
 }
-
 
 //* Una empresa tiene un listado de empleados. Cada empleado es representado con un objeto que contiene:
 //? nombre
@@ -137,20 +134,46 @@ for (let i = 0; i < usuarios.length; i++) {
 //* Lucía (38 años): Empleado de soporte técnico - Inactivo
 //* Juan (41 años): Empleado administrativo - Activo - Tiene más de 40 años
 
-
 console.log("====Ejercicio de repaso objetos 2====");
 
+let empleados = [
+  { nombre: "Marlon", edad: 20, departamento: "soporte", activo: true },
+  { nombre: "Jose", edad: 50, departamento: "ventas", activo: true },
+  { nombre: "Rick", edad: 30, departamento: "administracion", activo: true },
+  { nombre: "Max", edad: 70, departamento: "contabilidad", activo: false },
+];
+let cargo;
+let mensajeEdad;
+let activo;
+for (let i = 0; i < empleados.length; i++) {
+  //console.log(empleados[i]);
+  if (empleados[i].edad > 40) {
+    mensajeEdad = `| tiene mas de 40 años`;
+  } else {
+    mensajeEdad = ` `;
+  }
+  if (empleados[i].activo == true) {
+    activo = `esta activo`;
+  } else {
+    activo = ` no esta activo`;
+  }
 
+  switch (empleados[i].departamento) {
+    case "soporte":
+      cargo = "soporte";
+      break;
+    case "ventas":
+      cargo = "ventas";
+      break;
+    case "administracion":
+      cargo = "administración";
+      break;
+    default:
+      cargo = "Departamento no registrado";
+      break;
+  }
 
-
-
-
-
-
-
-
-
-
-
-
-
+  console.log(
+    `El empleado: ${empleados[i].nombre} ${activo}| tiene el cargo de: ${cargo} ${mensajeEdad}`
+  );
+}
