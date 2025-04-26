@@ -115,20 +115,20 @@ for (let i = 0; i < usuarios.length; i++) {
 }
 
 //* Una empresa tiene un listado de empleados. Cada empleado es representado con un objeto que contiene:
-//? nombre
-//? edad
-//? departamento (por ejemplo: "ventas", "soporte", "administración")
-//? activo (booleano que indica si el empleado está actualmente trabajando)
+  //? nombre
+  //? edad
+  //? departamento (por ejemplo: "ventas", "soporte", "administración")
+  //? activo (booleano que indica si el empleado está actualmente trabajando)
 //! Tu tarea:
 //! Recorre el arreglo de empleados usando un bucle (for o for...of).
 //! Utiliza condicionales (if, else if, else) para:
 //! Mostrar un mensaje diferente si el empleado es mayor de 40 años.
 //! Mostrar si el empleado está activo o no.
 //! Usa un switch para dar un mensaje según el departamento:
-//? "ventas" → "Empleado del área comercial"
-//? "soporte" → "Empleado de soporte técnico"
-//? "administración" → "Empleado administrativo"
-//? cualquier otro → "Departamento no registrado"
+    //? "ventas" → "Empleado del área comercial"
+    //? "soporte" → "Empleado de soporte técnico"
+    //? "administración" → "Empleado administrativo"
+    //? cualquier otro → "Departamento no registrado"
 //* Ejemplo de salida:
 //* Carlos (45 años): Empleado del área comercial - Activo
 //* Lucía (38 años): Empleado de soporte técnico - Inactivo
@@ -177,3 +177,6 @@ for (let i = 0; i < empleados.length; i++) {
     `El empleado: ${empleados[i].nombre} ${activo}| tiene el cargo de: ${cargo} ${mensajeEdad}`
   );
 }
+
+
+
