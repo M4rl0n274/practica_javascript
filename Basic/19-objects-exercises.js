@@ -193,10 +193,55 @@ let objetos = [
 let total = 0;
 
 for (let i = 0; i < objetos.length; i++) {
-  total += objetos[i].precio
-  
+  total += objetos[i].precio;
 }
-if (total > 100){
+if (total > 100) {
   console.log(`El precio total de los productos es de: ${total}`);
 }
 
+// Crea un programa que maneje una lista de productos de una tienda. Cada producto debe tener nombre, precio y categoría.
+// Haz lo siguiente:
+// Recorre el arreglo de productos con un bucle.
+// Usa un if para mostrar solo los productos cuyo precio sea menor o igual a 50.
+// Dentro del bucle, utiliza un switch que, según la categoría del producto ("comida", "bebida", "ropa") imprima un mensaje diferente:
+// Para comida: "Producto comestible"
+// Para bebida: "Producto líquido"
+// Para ropa: "Producto de vestir"
+// Para cualquier otra categoría: "Categoría desconocida"
+// Al final, muestra el total de todos los productos sumados.
+
+console.log("====Ejercicio de repaso objetos 4====");
+
+let productos = [
+  { nombre: "Manzana", precio: 15, categoria: "Comida" },
+  { nombre: "Jugo", precio: 20, categoria: "Bebida" },
+  { nombre: "Camisa", precio: 70, categoria: "Ropa" },
+  { nombre: "Televisor", precio: 7000, categoria: "Electrodomesticos" },
+  { nombre: "Portatil", precio: 9000, categoria: "frutas" },
+];
+
+for (let i = 0; i < productos.length; i++) {
+  if (productos[i].precio < 50) {
+    console.log(`El producto ${productos[i].nombre} cuesta menos de $50`);
+  }
+
+  switch (productos[i].categoria) {
+    case "Comida":
+      mensaje = "| Producto comestible";
+      break;
+    case "Bebida":
+      mensaje = "| Producto líquido";
+      break;
+    case "Ropa":
+      mensaje = "| Producto de vestir";
+      break;
+    default:
+      mensaje = "| Categoría desconocida";
+      break;
+  }
+
+  total += productos[i].precio;
+  console.log(
+    `El producto ${productos[i].nombre} pertenece a la cateforia ${productos[i].categoria} ${mensaje}`
+  );
+}
