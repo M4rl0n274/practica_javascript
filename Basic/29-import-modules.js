@@ -27,6 +27,9 @@ console.log(defaultImport(5, 10));
 // let myclass = new defaultImport()
 // myclass.func()
 
+// Proyecto modular
+// como importar desde mis archivos
+import {Myimport} from "./directory/File.js"
 
 
 
