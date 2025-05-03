@@ -1,5 +1,10 @@
 // 1. Exporta una función
 
+export function saludo(nombre){
+    return `Hola ${nombre} desde el archivo modules exercises`;
+}
+
+
 // 2. Exporta una constante
 
 // 3. Exporta una clase

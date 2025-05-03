@@ -2,7 +2,7 @@
 
 import Myclass, { add, name, PI, Circle } from "./28-export-modules.js";
 
-// el nombre d elas exportaciones por defecto puede ser cualquiera
+// el nombre de las exportaciones por defecto puede ser cualquiera
 import defaultImport from "./28-export-modules.js";
 
 // funciones
