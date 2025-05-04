@@ -292,6 +292,3 @@ const prompt = require("prompt-sync")();
 //   case "error":
 //     console.log("Dato ingresado invalido");
 // }
-
-
-
