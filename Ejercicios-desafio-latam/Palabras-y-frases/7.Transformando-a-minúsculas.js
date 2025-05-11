@@ -10,13 +10,10 @@
 // Test 2	CAT,dog
 // Test 3	King,KONG
 
-
-function aMinusculasPrimero (texto1 ,texto2){
-    return texto1.toLowerCase() + texto2
+function aMinusculasPrimero(texto1, texto2) {
+  return texto1.toLowerCase() + texto2;
 }
 
-console.log(aMinusculasPrimero("HOLA","MUNDO"));
-console.log(aMinusculasPrimero("CAT","DOG"));
-console.log(aMinusculasPrimero("KING","KONG"));
-
-
+console.log(aMinusculasPrimero("HOLA", "MUNDO"));
+console.log(aMinusculasPrimero("CAT", "DOG"));
+console.log(aMinusculasPrimero("KING", "KONG"));

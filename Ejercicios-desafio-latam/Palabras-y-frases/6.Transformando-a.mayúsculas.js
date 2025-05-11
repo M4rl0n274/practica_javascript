@@ -10,12 +10,9 @@
 // Test 2	cat,dog
 // Test 3	King,Kong
 
-
-
-function aMayusculas (texto1,texto2){
-       
-    return texto1.toUpperCase() + texto2.toUpperCase()  
+function aMayusculas(texto1, texto2) {
+  return texto1.toUpperCase() + texto2.toUpperCase();
 }
-console.log(aMayusculas("hola","mundo"));
-console.log(aMayusculas("cat","dog"));
-console.log(aMayusculas("king","kong"));
+console.log(aMayusculas("hola", "mundo"));
+console.log(aMayusculas("cat", "dog"));
+console.log(aMayusculas("king", "kong"));
