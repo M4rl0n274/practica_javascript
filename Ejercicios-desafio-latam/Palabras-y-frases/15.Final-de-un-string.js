@@ -8,10 +8,9 @@
 // Test 2	https://es.wikipedia.org/wiki/.org
 // Test 3	https://bethesda.net
 
-
-function obtenerTLD (url){
-    largo = url.length
-    return url.substring(largo -4)
+function obtenerTLD(url) {
+  largo = url.length;
+  return url.substring(largo - 4);
 }
 
 console.log(obtenerTLD("www.desafiolatam.com"));
